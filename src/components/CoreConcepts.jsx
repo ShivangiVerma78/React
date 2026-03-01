@@ -1,16 +1,14 @@
 
 import ConceptCard from "./ConceptCard.jsx";
+import Section from "./Section.jsx";
 import { CORE_CONCEPTS } from "../data.js";
 
 export default function CoreConcepts() {
   return (
-    <>
-        <h2>Core Concepts</h2>
-        <section id="core-concepts">
-          <ul>
+    <Section id="core-concepts" title="Core Concepts">
+        <ul>
             {CORE_CONCEPTS.map((coreConcept) => <ConceptCard key={coreConcept.title} {...coreConcept} />)}
-          </ul>
-        </section>
-    </>
+        </ul>
+    </Section>
   );
 }   
